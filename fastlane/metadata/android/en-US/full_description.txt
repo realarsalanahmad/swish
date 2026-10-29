@@ -1,0 +1,11 @@
+Swish is an independent Android video and music client maintained by ArsDevs.
+
+- Video playback, quality selection, captions and background playback
+- A dedicated music player, queues and lyrics
+- Shorts, local history, subscriptions, playlists and downloads
+- Local recommendation engines and Google Takeout import
+- Optional account storage for learned recommendation profiles
+
+Account profiles and enabled third-party features make network requests. Read
+the privacy policy for details. Takeout does not provide YouTube's private Home
+model. Swish is GPL-3.0 software and is not affiliated with YouTube or Google.

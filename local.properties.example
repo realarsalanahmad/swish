@@ -1,0 +1,11 @@
+# Copy this file to local.properties and set your own Android SDK location.
+sdk.dir=/absolute/path/to/Android/Sdk
+# Optional account backend. Use HTTPS. Never put database credentials here.
+swish.apiBaseUrl=https://your-swish-api.example
+# Optional integrations use your own credentials; leave them blank to omit them.
+# lastfm.apiKey=
+# lastfm.apiSecret=
+# Release signing values belong only in local.properties or CI secrets.
+# storePassword=
+# keyAlias=
+# keyPassword=

@@ -1,0 +1,47 @@
+name: Swish Android checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: swish-android-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-and-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@v3
+      - name: Install the Android SDK
+        run: sdkmanager "platforms;android-37.0" "build-tools;36.1.0"
+      - uses: gradle/actions/setup-gradle@v6
+      - name: Build wrapper permissions
+        run: chmod +x gradlew
+      - name: Verify source formatting and unit tests
+        run: ./gradlew ktlintCheck :app:testGithubDebugUnitTest :app:testFossDebugUnitTest --stacktrace
+      - name: Build both app flavors
+        env:
+          SWISH_API_BASE_URL: ${{ vars.SWISH_API_BASE_URL }}
+        run: ./gradlew :app:assembleGithubDebug :app:assembleFossDebug --stacktrace
+      - name: Save development APKs
+        uses: actions/upload-artifact@v7
+        with:
+          name: swish-development-apks
+          path: app/build/outputs/apk/**/debug/*.apk
+          if-no-files-found: error
+
