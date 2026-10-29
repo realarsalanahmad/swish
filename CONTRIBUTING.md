@@ -5,10 +5,23 @@ in this repository. For large changes, discuss the design before implementation.
 Keep private data out of logs and screenshots; use the private reporting route
 in SECURITY.md for vulnerabilities.
 
+## Ways to help
+
+| Contribution | Start here |
+| --- | --- |
+| Report a bug | [Open an issue](https://github.com/realarsalanahmad/swish/issues/new/choose) with steps, app version and device details |
+| Suggest an improvement | Explain the problem and the experience you want in a feature request |
+| Improve code or documentation | Fork the repository, make a focused change and open a pull request |
+
+A fork is your own copy of Swish. A pull request proposes changes back to this
+repository. ArsDevs reviews the proposal, may request changes, and decides whether
+to merge it. Opening a pull request does not give access to edit this repository
+or publish an APK. Contributions are voluntary; no payment is required.
+
 ## Develop
 
 1. Fork this repository and create a branch from its current main branch.
-2. Install JDK 21 and Android SDK platform/build tools 37.
+2. Install JDK 21, Android SDK platform 37.0 and Build Tools 36.1.0.
 3. Copy local.properties.example to local.properties and set sdk.dir.
 4. Build a flavor with `./gradlew :app:assembleGithubDebug` or the FOSS equivalent.
    Windows PowerShell uses `gradlew.bat`.

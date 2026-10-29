@@ -66,3 +66,7 @@ Flow-desktop/
 *.dmp
 artifacts/
 archive/
+
+# Python-generated cache
+__pycache__/
+*.py[cod]

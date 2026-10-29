@@ -26,4 +26,5 @@
 - Screenshots are permitted in the account dialog.
 
 Content filters depend on metadata and can miss or misclassify videos. This
-snapshot is a development build; it has not been published as a GitHub release.
+snapshot uses a development APK. Download information, checksums and installation
+instructions belong to its GitHub release page.

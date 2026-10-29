@@ -1,26 +1,34 @@
 <div align="center">
-  <img src="branding/logo.png" alt="Swish logo" width="180">
-  <h1>Swish</h1>
-  <p><strong>Your videos. Your music. Your taste.</strong></p>
-  <p>An independent Android video and music client, maintained by <a href="https://github.com/realarsalanahmad">ArsDevs</a>.</p>
-  <p><strong>Android 8.0+</strong> &nbsp; · &nbsp; <strong>Kotlin + Compose</strong> &nbsp; · &nbsp; <strong>GPL-3.0</strong></p>
-  <p><a href="#get-started">Get started</a> · <a href="#features">Features</a> · <a href="#build-it-yourself">Build</a> · <a href="privacy.md">Privacy</a> · <a href="CONTRIBUTING.md">Contribute</a></p>
+  <img src="branding/hero.png" alt="Swish: Watch. Listen. Make it yours. Videos, music and Shorts in one personal space." width="1280">
+  <p>An independent Android video and music client, made with care by <a href="https://github.com/realarsalanahmad"><strong>ArsDevs</strong></a>.</p>
+  <p>
+    <a href="https://github.com/realarsalanahmad/swish/releases/latest/download/Swish-latest.apk"><img src="branding/download.svg" alt="Download latest Swish APK" height="52"></a>
+    &nbsp;
+    <a href="https://www.youtube.com/@ArsDevS1"><img src="branding/youtube.svg" alt="Visit ArsDevS1 on YouTube" height="52"></a>
+  </p>
+  <p><strong>Android 8.0+</strong> &nbsp; · &nbsp; <strong>Universal APK</strong> &nbsp; · &nbsp; <strong>GPL-3.0</strong></p>
+  <p><a href="#features">Highlights</a> · <a href="#get-started">Get started</a> · <a href="https://github.com/realarsalanahmad/swish/releases">Release notes</a> · <a href="privacy.md">Privacy</a> · <a href="CONTRIBUTING.md">Contribute</a></p>
 </div>
 
 ---
 
-Swish brings video playback, a dedicated music player, Shorts and a personal
-library into one app. Its recommendation engines learn on your device. An
-optional Swish account can save your learned interests for later restoration.
+Watch videos, settle into your music, swipe through Shorts and keep a personal
+library. Swish learns your interests on your device, while an optional account
+can save your imported taste for later restoration.
 
 ## Features
 
-| Explore | Play | Keep |
-| :--- | :--- | :--- |
-| Personalized video Home | Video quality and audio-track selection | Watch history and subscriptions |
-| Dedicated music discovery | Music queues, lyrics and playback controls | Likes, playlists and saved Shorts |
-| Vertical Shorts feed | Background playback and picture-in-picture | Downloads and local media |
-| Takeout import from Settings | Playback speed, captions and gestures | Backup, restore and device sync |
+| Highlight | What you get |
+| :--- | :--- |
+| **A feed shaped by you** | On-device learning, more variety, recent uploads and filters for unwanted content |
+| **A dedicated music experience** | Music discovery, queues, lyrics and background listening |
+| **Shorts with room to breathe** | Channel, like and comments while playing; pause to reveal more controls |
+| **Bring your YouTube taste** | Import Takeout history, subscriptions and playlists directly from Settings |
+| **Keep your learned interests** | Optional account save and restore, including imports made before sign-in |
+| **A fresh start when you want it** | Reset selected personalization profiles and replace saved account taste |
+| **Playback your way** | Quality and audio-track selection, captions, speed controls and picture-in-picture |
+| **A library that stays useful** | Downloads, local media, playlists, likes, backups and device sync |
+| **A look that feels yours** | Material 3 themes and a Home logo that follows your selected palette |
 
 Optional integrations include SponsorBlock, DeArrow, Return YouTube Dislike,
 song recognition and Discord presence. Their providers receive the requests
@@ -28,12 +36,18 @@ described in the [privacy policy](privacy.md).
 
 ## Get started
 
-1. Install a Swish APK that you built or obtained from this repository's releases.
+1. [Download the latest APK](https://github.com/realarsalanahmad/swish/releases/latest/download/Swish-latest.apk)
+   and install it. Android may ask you to allow installation from your browser.
 2. Browse without an account, or open **Settings → Swish account** to sign in.
 3. Open **Settings → Backup** to import Google Takeout ZIPs. Select all parts of
    a split export together; more exports can be added later.
 4. Watch and listen to teach the local engines. Use **Your taste** to inspect
    interests, hide unwanted content or reset personalization.
+
+The current download is **3.0.0-debug**, a development APK for Android 8.0 and
+newer. The universal file supports ARM and x86 devices. Find its checksum and
+corresponding source in the [latest release](https://github.com/realarsalanahmad/swish/releases/latest).
+Existing installations must use a compatible signing key to update in place.
 
 ### Bring your YouTube interests
 
@@ -69,6 +83,25 @@ theme, and the Developer entry opens the maintainer's GitHub profile.
 > Takeout is a snapshot, not a live YouTube connection. Swish's engines do not
 > reproduce YouTube's private recommendation model. Content classification uses
 > available metadata and can make mistakes.
+
+## Follow ArsDevs
+
+Swish is maintained by **ArsDevs**. Visit **ArsDevS1** on YouTube for the creator's
+channel and Swish updates.
+
+[![ArsDevS1 on YouTube](branding/youtube.svg)](https://www.youtube.com/@ArsDevS1)
+
+## Help shape Swish
+
+- [Report a bug or suggest an idea](https://github.com/realarsalanahmad/swish/issues/new/choose).
+- Improve code, documentation or translations through a pull request.
+- Share Swish and follow the creator's work.
+
+[Contribute](CONTRIBUTING.md) explains how to start. ArsDevs reviews proposed
+changes before merging them into Swish.
+
+<details>
+<summary><strong>Build from source and development checks</strong></summary>
 
 ## Build it yourself
 
@@ -130,6 +163,8 @@ To create a source-only archive for GitHub or a release:
 ```bash
 python scripts/prepare_github.py --output ../Swish-github-source.zip
 ```
+
+</details>
 
 ## Privacy and rights
 
