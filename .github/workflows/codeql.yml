@@ -52,7 +52,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - uses: android-actions/setup-android@v3
+      - uses: android-actions/setup-android@v4
 
       - name: Install the Android SDK
         run: sdkmanager "platforms;android-37.0" "build-tools;36.1.0"
